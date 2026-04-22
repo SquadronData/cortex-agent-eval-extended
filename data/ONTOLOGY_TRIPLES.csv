@@ -1,0 +1,161 @@
+TRIPLE_ID,SUBJECT,PREDICATE,OBJECT,SUBJECT_DOMAIN,OBJECT_DOMAIN,CONFIDENCE
+1,Apex Dynamics Inc,TARGETED_BY,Brand Awareness - Tech Sector,sales,marketing,0.92
+2,NovaTech Solutions,TARGETED_BY,Brand Awareness - Tech Sector,sales,marketing,0.88
+3,CloudSphere Technologies,TARGETED_BY,Brand Awareness - Tech Sector,sales,marketing,0.90
+4,DataStream Analytics,TARGETED_BY,Brand Awareness - Tech Sector,sales,marketing,0.82
+5,Nexus Tech Innovations,TARGETED_BY,Brand Awareness - Tech Sector,sales,marketing,0.86
+6,Quantum Computing Labs,TARGETED_BY,Brand Awareness - Tech Sector,sales,marketing,0.91
+7,Apex Dynamics Inc,TARGETED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.95
+8,Titan Financial Group,TARGETED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.94
+9,Summit Retail Holdings,TARGETED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.93
+10,Pinnacle Healthcare Partners,TARGETED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.92
+11,Ironclad Industries,TARGETED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.91
+12,CloudSphere Technologies,TARGETED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.95
+13,Atlas Financial Services,TARGETED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.94
+14,Omni Retail Solutions,TARGETED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.93
+15,Quantum Computing Labs,TARGETED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.94
+16,Meridian Health Systems,TARGETED_BY,Q1 Email Nurture Series,sales,marketing,0.85
+17,Titan Financial Group,TARGETED_BY,Q1 Email Nurture Series,sales,marketing,0.90
+18,Forge Manufacturing Co,TARGETED_BY,Q1 Email Nurture Series,sales,marketing,0.78
+19,Ironclad Industries,TARGETED_BY,Q1 Email Nurture Series,sales,marketing,0.88
+20,Atlas Financial Services,TARGETED_BY,Q1 Email Nurture Series,sales,marketing,0.92
+21,Apex Dynamics Inc,TARGETED_BY,Webinar Series Promotion,sales,marketing,0.80
+22,Titan Financial Group,TARGETED_BY,Webinar Series Promotion,sales,marketing,0.82
+23,CloudSphere Technologies,TARGETED_BY,Webinar Series Promotion,sales,marketing,0.84
+24,Summit Retail Holdings,TARGETED_BY,New Market Expansion - West Coast,sales,marketing,0.88
+25,NovaTech Solutions,TARGETED_BY,New Market Expansion - West Coast,sales,marketing,0.85
+26,CloudSphere Technologies,TARGETED_BY,New Market Expansion - West Coast,sales,marketing,0.90
+27,Pacific Health Network,TARGETED_BY,New Market Expansion - West Coast,sales,marketing,0.83
+28,Redwood Capital Advisors,TARGETED_BY,New Market Expansion - West Coast,sales,marketing,0.82
+29,Quantum Computing Labs,TARGETED_BY,New Market Expansion - West Coast,sales,marketing,0.89
+30,BookWise EdTech,TARGETED_BY,New Market Expansion - West Coast,sales,marketing,0.78
+31,Apex Dynamics - Enterprise Platform,INFLUENCED_BY,Brand Awareness - Tech Sector,sales,marketing,0.88
+32,Apex Dynamics - API Integration,INFLUENCED_BY,Webinar Series Promotion,sales,marketing,0.72
+33,CloudSphere - Enterprise Data Lake,INFLUENCED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.90
+34,CloudSphere - ML Pipeline,INFLUENCED_BY,Brand Awareness - Tech Sector,sales,marketing,0.82
+35,Quantum Labs - HPC Analytics,INFLUENCED_BY,Brand Awareness - Tech Sector,sales,marketing,0.85
+36,Quantum Labs - Research Platform,INFLUENCED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.78
+37,Titan Financial - Risk Analytics Suite,INFLUENCED_BY,Q1 Email Nurture Series,sales,marketing,0.87
+38,Atlas Financial - Trading Analytics,INFLUENCED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.91
+39,Atlas Financial - Regulatory Dashboard,INFLUENCED_BY,Q1 Email Nurture Series,sales,marketing,0.80
+40,Meridian Health - Clinical Analytics,INFLUENCED_BY,Q1 Email Nurture Series,sales,marketing,0.83
+41,Summit Retail - Omnichannel Analytics,INFLUENCED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.86
+42,Summit Retail - Customer 360 Platform,INFLUENCED_BY,Customer Testimonials Campaign,sales,marketing,0.75
+43,Omni Retail - Unified Commerce Platform,INFLUENCED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.89
+44,Ironclad Industries - Production Analytics,INFLUENCED_BY,Q1 Email Nurture Series,sales,marketing,0.77
+45,NovaTech - DevOps Monitoring,INFLUENCED_BY,Brand Awareness - Tech Sector,sales,marketing,0.80
+46,Nexus Tech - Cloud Monitoring,INFLUENCED_BY,Brand Awareness - Tech Sector,sales,marketing,0.78
+47,Pinnacle Healthcare - Patient Analytics,INFLUENCED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.84
+48,Brightpath Education - LMS Analytics,INFLUENCED_BY,Webinar Series Promotion,sales,marketing,0.90
+49,LifeBridge Medical - EHR Analytics,INFLUENCED_BY,Webinar Series Promotion,sales,marketing,0.88
+50,Keystone Bank - Fraud Detection,INFLUENCED_BY,Webinar Series Promotion,sales,marketing,0.82
+51,Cornerstone Mfg - Factory Analytics,INFLUENCED_BY,Q1 Email Nurture Series,sales,marketing,0.74
+52,Forge Manufacturing - IoT Dashboard,INFLUENCED_BY,Q1 Email Nurture Series,sales,marketing,0.76
+53,Sterling Wealth - Advisor Dashboard,INFLUENCED_BY,LinkedIn B2B Lead Gen,sales,marketing,0.81
+54,Redwood Capital - Portfolio Analytics,INFLUENCED_BY,Referral Program Launch,sales,marketing,0.85
+55,Apex Dynamics - Enterprise Platform,SOURCED_FROM,Outbound,sales,sales,0.95
+56,CloudSphere - Enterprise Data Lake,SOURCED_FROM,Outbound,sales,sales,0.95
+57,Meridian Health - Clinical Analytics,SOURCED_FROM,Inbound,sales,sales,0.95
+58,NovaTech - DevOps Monitoring,SOURCED_FROM,Inbound,sales,sales,0.95
+59,Summit Retail - Omnichannel Analytics,SOURCED_FROM,Inbound,sales,sales,0.95
+60,Brightpath Education - LMS Analytics,SOURCED_FROM,Webinar,sales,sales,0.95
+61,LifeBridge Medical - EHR Analytics,SOURCED_FROM,Webinar,sales,sales,0.95
+62,Forge Manufacturing - IoT Dashboard,SOURCED_FROM,Trade Show,sales,sales,0.95
+63,Ironclad Industries - Production Analytics,SOURCED_FROM,Trade Show,sales,sales,0.95
+64,Redwood Capital - Portfolio Analytics,SOURCED_FROM,Referral,sales,sales,0.95
+65,Catalina University - Research Analytics,SOURCED_FROM,Referral,sales,sales,0.95
+66,Inbound,SOURCED_FROM,Brand Awareness - Tech Sector,sales,marketing,0.75
+67,Inbound,SOURCED_FROM,LinkedIn B2B Lead Gen,sales,marketing,0.78
+68,Inbound,SOURCED_FROM,Webinar Series Promotion,sales,marketing,0.80
+69,Webinar,SOURCED_FROM,Webinar Series Promotion,sales,marketing,0.92
+70,Referral,SOURCED_FROM,Referral Program Launch,sales,marketing,0.85
+71,rachel.sales,OWNS,Apex Dynamics Inc,sales,sales,1.0
+72,rachel.sales,OWNS,Titan Financial Group,sales,sales,1.0
+73,rachel.sales,OWNS,Pinnacle Healthcare Partners,sales,sales,1.0
+74,rachel.sales,OWNS,CloudSphere Technologies,sales,sales,1.0
+75,rachel.sales,OWNS,Quantum Computing Labs,sales,sales,1.0
+76,david.hunter,OWNS,Meridian Health Systems,sales,sales,1.0
+77,david.hunter,OWNS,Brightpath Education,sales,sales,1.0
+78,david.hunter,OWNS,Redwood Capital Advisors,sales,sales,1.0
+79,david.hunter,OWNS,Omni Retail Solutions,sales,sales,1.0
+80,carlos.rivera,OWNS,Forge Manufacturing Co,sales,sales,1.0
+81,carlos.rivera,OWNS,NovaTech Solutions,sales,sales,1.0
+82,carlos.rivera,OWNS,Atlas Financial Services,sales,sales,1.0
+83,sarah.connors,OWNS,Summit Retail Holdings,sales,sales,1.0
+84,sarah.connors,OWNS,Ironclad Industries,sales,sales,1.0
+85,sarah.marketing,OWNS,Spring Fashion Launch 2024,marketing,marketing,1.0
+86,john.campaigns,OWNS,Q1 Email Nurture Series,marketing,marketing,1.0
+87,michael.brand,OWNS,Brand Awareness - Tech Sector,marketing,marketing,1.0
+88,michael.brand,OWNS,LinkedIn B2B Lead Gen,marketing,marketing,1.0
+89,emily.digital,OWNS,New Product Teaser Campaign,marketing,marketing,1.0
+90,john.campaigns,OWNS,Webinar Series Promotion,marketing,marketing,1.0
+91,michael.brand,OWNS,New Market Expansion - West Coast,marketing,marketing,1.0
+92,Apex Dynamics Inc,BELONGS_TO,Technology,sales,shared,1.0
+93,NovaTech Solutions,BELONGS_TO,Technology,sales,shared,1.0
+94,CloudSphere Technologies,BELONGS_TO,Technology,sales,shared,1.0
+95,DataStream Analytics,BELONGS_TO,Technology,sales,shared,1.0
+96,Nexus Tech Innovations,BELONGS_TO,Technology,sales,shared,1.0
+97,Quantum Computing Labs,BELONGS_TO,Technology,sales,shared,1.0
+98,Meridian Health Systems,BELONGS_TO,Healthcare,sales,shared,1.0
+99,Pinnacle Healthcare Partners,BELONGS_TO,Healthcare,sales,shared,1.0
+100,Pacific Health Network,BELONGS_TO,Healthcare,sales,shared,1.0
+101,LifeBridge Medical Group,BELONGS_TO,Healthcare,sales,shared,1.0
+102,Valley Health Clinic,BELONGS_TO,Healthcare,sales,shared,1.0
+103,Titan Financial Group,BELONGS_TO,Financial Services,sales,shared,1.0
+104,Redwood Capital Advisors,BELONGS_TO,Financial Services,sales,shared,1.0
+105,Atlas Financial Services,BELONGS_TO,Financial Services,sales,shared,1.0
+106,Sterling Wealth Management,BELONGS_TO,Financial Services,sales,shared,1.0
+107,Keystone Bank Corp,BELONGS_TO,Financial Services,sales,shared,1.0
+108,Forge Manufacturing Co,BELONGS_TO,Manufacturing,sales,shared,1.0
+109,Ironclad Industries,BELONGS_TO,Manufacturing,sales,shared,1.0
+110,Precision Parts Manufacturing,BELONGS_TO,Manufacturing,sales,shared,1.0
+111,Cornerstone Manufacturing,BELONGS_TO,Manufacturing,sales,shared,1.0
+112,Heritage Craft Manufacturing,BELONGS_TO,Manufacturing,sales,shared,1.0
+113,Summit Retail Holdings,BELONGS_TO,Retail,sales,shared,1.0
+114,Vanguard Retail Group,BELONGS_TO,Retail,sales,shared,1.0
+115,Urban Style Retail,BELONGS_TO,Retail,sales,shared,1.0
+116,Evergreen Market Co,BELONGS_TO,Retail,sales,shared,1.0
+117,Omni Retail Solutions,BELONGS_TO,Retail,sales,shared,1.0
+118,Brightpath Education,BELONGS_TO,Education,sales,shared,1.0
+119,Horizon Learning Corp,BELONGS_TO,Education,sales,shared,1.0
+120,Catalina University Systems,BELONGS_TO,Education,sales,shared,1.0
+121,BookWise EdTech,BELONGS_TO,Education,sales,shared,1.0
+122,Apex Dynamics Inc,MATCHES_SEGMENT,Enterprise Decision Makers,sales,marketing,0.95
+123,Titan Financial Group,MATCHES_SEGMENT,Enterprise Decision Makers,sales,marketing,0.94
+124,Summit Retail Holdings,MATCHES_SEGMENT,Enterprise Decision Makers,sales,marketing,0.93
+125,Pinnacle Healthcare Partners,MATCHES_SEGMENT,Enterprise Decision Makers,sales,marketing,0.92
+126,Ironclad Industries,MATCHES_SEGMENT,Enterprise Decision Makers,sales,marketing,0.91
+127,CloudSphere Technologies,MATCHES_SEGMENT,Enterprise Decision Makers,sales,marketing,0.95
+128,Atlas Financial Services,MATCHES_SEGMENT,Enterprise Decision Makers,sales,marketing,0.94
+129,Omni Retail Solutions,MATCHES_SEGMENT,Enterprise Decision Makers,sales,marketing,0.93
+130,Quantum Computing Labs,MATCHES_SEGMENT,Enterprise Decision Makers,sales,marketing,0.94
+131,Apex Dynamics Inc,MATCHES_SEGMENT,Tech Professionals 30-55,sales,marketing,0.90
+132,NovaTech Solutions,MATCHES_SEGMENT,Tech Professionals 30-55,sales,marketing,0.88
+133,CloudSphere Technologies,MATCHES_SEGMENT,Tech Professionals 30-55,sales,marketing,0.92
+134,DataStream Analytics,MATCHES_SEGMENT,Tech Professionals 30-55,sales,marketing,0.82
+135,Nexus Tech Innovations,MATCHES_SEGMENT,Tech Professionals 30-55,sales,marketing,0.86
+136,Quantum Computing Labs,MATCHES_SEGMENT,Tech Professionals 30-55,sales,marketing,0.91
+137,Titan Financial Group,MATCHES_SEGMENT,B2B Decision Makers,sales,marketing,0.90
+138,Ironclad Industries,MATCHES_SEGMENT,B2B Decision Makers,sales,marketing,0.88
+139,Atlas Financial Services,MATCHES_SEGMENT,B2B Decision Makers,sales,marketing,0.92
+140,Summit Retail Holdings,MATCHES_SEGMENT,West Coast Residents,sales,marketing,0.88
+141,CloudSphere Technologies,MATCHES_SEGMENT,West Coast Residents,sales,marketing,0.90
+142,Pacific Health Network,MATCHES_SEGMENT,West Coast Residents,sales,marketing,0.83
+143,Quantum Computing Labs,MATCHES_SEGMENT,West Coast Residents,sales,marketing,0.89
+144,Brand Awareness - Tech Sector,USES_CHANNEL,search,marketing,shared,1.0
+145,LinkedIn B2B Lead Gen,USES_CHANNEL,social,marketing,shared,1.0
+146,Q1 Email Nurture Series,USES_CHANNEL,email,marketing,shared,1.0
+147,Webinar Series Promotion,USES_CHANNEL,email,marketing,shared,1.0
+148,New Market Expansion - West Coast,USES_CHANNEL,display,marketing,shared,1.0
+149,Spring Fashion Launch 2024,USES_CHANNEL,social,marketing,shared,1.0
+150,Summer Sale Extravaganza,USES_CHANNEL,display,marketing,shared,1.0
+151,Black Friday Mega Sale,USES_CHANNEL,social,marketing,shared,1.0
+152,Holiday Gift Guide 2024,USES_CHANNEL,display,marketing,shared,1.0
+153,Customer Retention Q2,USES_CHANNEL,email,marketing,shared,1.0
+154,Brand Awareness - Tech Sector,TARGETS_SEGMENT,Tech Professionals 30-55,marketing,marketing,1.0
+155,LinkedIn B2B Lead Gen,TARGETS_SEGMENT,Enterprise Decision Makers,marketing,marketing,1.0
+156,Q1 Email Nurture Series,TARGETS_SEGMENT,B2B Decision Makers,marketing,marketing,1.0
+157,Webinar Series Promotion,TARGETS_SEGMENT,B2B Professionals,marketing,marketing,1.0
+158,Customer Testimonials Campaign,TARGETS_SEGMENT,Prospective Customers,marketing,marketing,1.0
+159,Customer Retention Q2,TARGETS_SEGMENT,Existing Customers,marketing,marketing,1.0
+160,New Market Expansion - West Coast,TARGETS_SEGMENT,West Coast Residents,marketing,marketing,1.0

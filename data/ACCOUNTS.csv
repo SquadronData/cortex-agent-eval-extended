@@ -1,0 +1,31 @@
+ACCOUNT_ID,ACCOUNT_NAME,INDUSTRY,COMPANY_SIZE,ANNUAL_REVENUE,REGION,ACCOUNT_OWNER,ACCOUNT_TIER,CREATED_DATE
+1,Apex Dynamics Inc,Technology,Enterprise,85000000.00,Northeast,rachel.sales,Strategic,2023-06-15
+2,Meridian Health Systems,Healthcare,Enterprise,120000000.00,Southeast,david.hunter,Strategic,2023-03-22
+3,Titan Financial Group,Financial Services,Enterprise,250000000.00,Northeast,rachel.sales,Strategic,2023-01-10
+4,Forge Manufacturing Co,Manufacturing,Mid-Market,42000000.00,Midwest,carlos.rivera,Growth,2023-07-18
+5,Summit Retail Holdings,Retail,Enterprise,175000000.00,West,sarah.connors,Strategic,2023-02-28
+6,Brightpath Education,Education,Mid-Market,28000000.00,Southeast,david.hunter,Growth,2023-09-05
+7,NovaTech Solutions,Technology,Mid-Market,35000000.00,West,carlos.rivera,Growth,2023-04-12
+8,Pinnacle Healthcare Partners,Healthcare,Enterprise,95000000.00,Northeast,rachel.sales,Strategic,2023-05-30
+9,Ironclad Industries,Manufacturing,Enterprise,110000000.00,Midwest,sarah.connors,Strategic,2023-08-14
+10,Redwood Capital Advisors,Financial Services,Mid-Market,55000000.00,West,david.hunter,Growth,2023-11-02
+11,Vanguard Retail Group,Retail,Mid-Market,38000000.00,Southeast,carlos.rivera,Growth,2023-06-25
+12,Horizon Learning Corp,Education,Small,12000000.00,Northeast,sarah.connors,Develop,2023-10-18
+13,CloudSphere Technologies,Technology,Enterprise,200000000.00,West,rachel.sales,Strategic,2024-01-08
+14,Pacific Health Network,Healthcare,Mid-Market,48000000.00,West,david.hunter,Growth,2023-12-03
+15,Atlas Financial Services,Financial Services,Enterprise,310000000.00,Northeast,carlos.rivera,Strategic,2023-03-15
+16,Precision Parts Manufacturing,Manufacturing,Small,18000000.00,Midwest,sarah.connors,Develop,2023-07-22
+17,Urban Style Retail,Retail,Small,15000000.00,Southwest,david.hunter,Develop,2024-02-14
+18,Catalina University Systems,Education,Enterprise,75000000.00,Southeast,rachel.sales,Growth,2023-08-30
+19,DataStream Analytics,Technology,Small,8000000.00,Northeast,carlos.rivera,Develop,2024-03-01
+20,LifeBridge Medical Group,Healthcare,Small,22000000.00,Midwest,sarah.connors,Growth,2023-11-15
+21,Sterling Wealth Management,Financial Services,Mid-Market,65000000.00,Southeast,rachel.sales,Growth,2023-05-10
+22,Cornerstone Manufacturing,Manufacturing,Mid-Market,52000000.00,Northeast,david.hunter,Growth,2023-09-28
+23,Evergreen Market Co,Retail,Mid-Market,30000000.00,Midwest,carlos.rivera,Growth,2024-01-20
+24,Nexus Tech Innovations,Technology,Mid-Market,45000000.00,Southwest,sarah.connors,Growth,2023-04-05
+25,Valley Health Clinic,Healthcare,Small,9500000.00,Southwest,david.hunter,Develop,2024-02-08
+26,Keystone Bank Corp,Financial Services,Small,20000000.00,Midwest,rachel.sales,Develop,2023-12-12
+27,Heritage Craft Manufacturing,Manufacturing,Small,14000000.00,Southeast,carlos.rivera,Develop,2024-01-15
+28,BookWise EdTech,Education,Small,6000000.00,West,sarah.connors,Develop,2024-03-10
+29,Omni Retail Solutions,Retail,Enterprise,160000000.00,Northeast,david.hunter,Strategic,2023-02-05
+30,Quantum Computing Labs,Technology,Enterprise,150000000.00,West,rachel.sales,Strategic,2023-07-01

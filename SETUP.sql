@@ -99,16 +99,16 @@ GRANT CREATE AGENT ON SCHEMA MARKETING_CAMPAIGNS_DB.AGENTS TO ROLE AGENT_EVAL_RO
 -- Use new role
 USE ROLE AGENT_EVAL_ROLE;
 
--- Create API integration for GitHub (public repo, no secrets needed)
+-- Create API integration for GitHub
 CREATE API INTEGRATION IF NOT EXISTS GIT_API_INTEGRATION_AGENT_EVAL_QUICKSTART
     API_PROVIDER = git_https_api
-    API_ALLOWED_PREFIXES = ('https://github.com/Snowflake-Labs/')
+    API_ALLOWED_PREFIXES = ('https://github.com/SquadronData/')
     ENABLED = TRUE;
 
 -- Clone the GitHub repository
 CREATE OR REPLACE GIT REPOSITORY CORTEX_AGENT_QUICKSTART_REPO
     API_INTEGRATION = GIT_API_INTEGRATION_AGENT_EVAL_QUICKSTART
-    ORIGIN = 'https://github.com/Snowflake-Labs/sfguide-getting-started-with-cortex-agent-evaluations.git';
+    ORIGIN = 'https://github.com/SquadronData/cortex-agent-eval-extended.git';
 
 -- Fetch latest from GitHub
 ALTER GIT REPOSITORY CORTEX_AGENT_QUICKSTART_REPO FETCH;

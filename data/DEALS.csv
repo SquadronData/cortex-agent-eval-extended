@@ -1,0 +1,81 @@
+DEAL_ID,ACCOUNT_ID,DEAL_NAME,DEAL_STAGE,DEAL_AMOUNT,CLOSE_DATE,CREATED_DATE,DEAL_OWNER,PRODUCT_LINE,LEAD_SOURCE,IS_WON,IS_CLOSED
+1,1,Apex Dynamics - Enterprise Platform,Closed Won,285000.00,2024-04-15,2024-01-10,rachel.sales,Platform,Outbound,1,1
+2,1,Apex Dynamics - API Integration,Closed Won,92000.00,2024-06-20,2024-03-05,rachel.sales,Integration,Referral,1,1
+3,1,Apex Dynamics - Q4 Expansion,Negotiation,175000.00,2024-12-30,2024-09-15,rachel.sales,Platform,Upsell,0,0
+4,2,Meridian Health - Clinical Analytics,Closed Won,420000.00,2024-05-28,2024-01-22,david.hunter,Analytics,Inbound,1,1
+5,2,Meridian Health - Data Warehouse Migration,Closed Won,315000.00,2024-08-12,2024-04-10,david.hunter,Platform,Upsell,1,1
+6,2,Meridian Health - AI Assistant Pilot,Discovery,180000.00,2025-02-15,2024-10-01,david.hunter,AI Services,Outbound,0,0
+7,3,Titan Financial - Risk Analytics Suite,Closed Won,550000.00,2024-03-30,2023-11-15,rachel.sales,Analytics,Outbound,1,1
+8,3,Titan Financial - Compliance Reporting,Closed Won,230000.00,2024-07-22,2024-03-18,rachel.sales,Analytics,Upsell,1,1
+9,3,Titan Financial - Cloud Migration Phase 2,Proposal,680000.00,2025-01-31,2024-09-20,rachel.sales,Platform,Upsell,0,0
+10,4,Forge Manufacturing - IoT Dashboard,Closed Won,145000.00,2024-06-15,2024-02-20,carlos.rivera,Analytics,Trade Show,1,1
+11,4,Forge Manufacturing - Supply Chain Analytics,Closed Lost,210000.00,2024-09-30,2024-05-12,carlos.rivera,Analytics,Outbound,0,1
+12,5,Summit Retail - Omnichannel Analytics,Closed Won,380000.00,2024-04-22,2024-01-08,sarah.connors,Analytics,Inbound,1,1
+13,5,Summit Retail - Customer 360 Platform,Closed Won,520000.00,2024-08-30,2024-04-15,sarah.connors,Platform,Upsell,1,1
+14,5,Summit Retail - Holiday Season Prep,Closed Won,165000.00,2024-10-15,2024-07-20,sarah.connors,Integration,Upsell,1,1
+15,6,Brightpath Education - LMS Analytics,Closed Won,88000.00,2024-05-10,2024-02-15,david.hunter,Analytics,Webinar,1,1
+16,6,Brightpath Education - Student Success Platform,Closed Lost,195000.00,2024-08-20,2024-04-25,david.hunter,Platform,Upsell,0,1
+17,7,NovaTech - DevOps Monitoring,Closed Won,110000.00,2024-03-28,2024-01-05,carlos.rivera,Platform,Inbound,1,1
+18,7,NovaTech - Security Analytics,Closed Won,78000.00,2024-07-10,2024-04-08,carlos.rivera,Analytics,Upsell,1,1
+19,7,NovaTech - Platform Expansion,Negotiation,155000.00,2024-12-20,2024-09-01,carlos.rivera,Platform,Upsell,0,0
+20,8,Pinnacle Healthcare - Patient Analytics,Closed Won,340000.00,2024-06-05,2024-02-12,rachel.sales,Analytics,Outbound,1,1
+21,8,Pinnacle Healthcare - Telehealth Integration,Closed Won,195000.00,2024-09-18,2024-05-22,rachel.sales,Integration,Upsell,1,1
+22,9,Ironclad Industries - Production Analytics,Closed Won,265000.00,2024-05-15,2024-01-28,sarah.connors,Analytics,Trade Show,1,1
+23,9,Ironclad Industries - Predictive Maintenance,Closed Won,185000.00,2024-08-25,2024-04-18,sarah.connors,AI Services,Upsell,1,1
+24,9,Ironclad Industries - ERP Integration,Proposal,320000.00,2025-01-15,2024-10-05,sarah.connors,Integration,Upsell,0,0
+25,10,Redwood Capital - Portfolio Analytics,Closed Won,175000.00,2024-04-10,2024-01-15,david.hunter,Analytics,Referral,1,1
+26,10,Redwood Capital - Client Reporting Platform,Closed Lost,240000.00,2024-07-30,2024-03-25,david.hunter,Platform,Upsell,0,1
+27,11,Vanguard Retail - POS Analytics,Closed Won,95000.00,2024-05-20,2024-02-10,carlos.rivera,Analytics,Inbound,1,1
+28,11,Vanguard Retail - Inventory Optimization,Closed Won,130000.00,2024-09-10,2024-05-15,carlos.rivera,AI Services,Upsell,1,1
+29,12,Horizon Learning - Course Analytics,Closed Won,52000.00,2024-06-28,2024-03-10,sarah.connors,Analytics,Webinar,1,1
+30,12,Horizon Learning - Enrollment Platform,Closed Lost,115000.00,2024-10-15,2024-06-20,sarah.connors,Platform,Outbound,0,1
+31,13,CloudSphere - Enterprise Data Lake,Closed Won,750000.00,2024-06-30,2024-02-01,rachel.sales,Platform,Outbound,1,1
+32,13,CloudSphere - ML Pipeline,Closed Won,420000.00,2024-10-20,2024-06-05,rachel.sales,AI Services,Upsell,1,1
+33,13,CloudSphere - Global Expansion,Discovery,950000.00,2025-03-31,2024-11-01,rachel.sales,Platform,Upsell,0,0
+34,14,Pacific Health - Clinic Management,Closed Won,125000.00,2024-07-15,2024-03-20,david.hunter,Platform,Inbound,1,1
+35,14,Pacific Health - Reporting Module,Closed Won,68000.00,2024-10-08,2024-07-01,david.hunter,Analytics,Upsell,1,1
+36,15,Atlas Financial - Trading Analytics,Closed Won,485000.00,2024-04-05,2023-12-10,carlos.rivera,Analytics,Outbound,1,1
+37,15,Atlas Financial - Regulatory Dashboard,Closed Won,290000.00,2024-07-28,2024-04-12,carlos.rivera,Analytics,Upsell,1,1
+38,15,Atlas Financial - AI Risk Scoring,Negotiation,610000.00,2025-02-28,2024-10-15,carlos.rivera,AI Services,Upsell,0,0
+39,16,Precision Parts - Quality Dashboard,Closed Won,62000.00,2024-05-30,2024-02-28,sarah.connors,Analytics,Trade Show,1,1
+40,16,Precision Parts - Workflow Automation,Closed Lost,95000.00,2024-09-15,2024-05-20,sarah.connors,Integration,Outbound,0,1
+41,17,Urban Style - E-commerce Analytics,Closed Won,48000.00,2024-06-12,2024-03-15,david.hunter,Analytics,Inbound,1,1
+42,17,Urban Style - Marketing Attribution,Closed Lost,72000.00,2024-09-20,2024-06-01,david.hunter,Analytics,Outbound,0,1
+43,18,Catalina University - Research Analytics,Closed Won,198000.00,2024-05-18,2024-01-25,rachel.sales,Analytics,Referral,1,1
+44,18,Catalina University - Grant Management Platform,Closed Won,155000.00,2024-09-05,2024-05-10,rachel.sales,Platform,Upsell,1,1
+45,19,DataStream - Starter Analytics,Closed Won,32000.00,2024-04-20,2024-03-01,carlos.rivera,Analytics,Inbound,1,1
+46,19,DataStream - Platform Upgrade,Closed Lost,85000.00,2024-08-30,2024-05-15,carlos.rivera,Platform,Upsell,0,1
+47,20,LifeBridge Medical - EHR Analytics,Closed Won,105000.00,2024-06-22,2024-03-08,sarah.connors,Analytics,Webinar,1,1
+48,20,LifeBridge Medical - Billing Integration,Closed Won,78000.00,2024-10-12,2024-07-15,sarah.connors,Integration,Upsell,1,1
+49,21,Sterling Wealth - Advisor Dashboard,Closed Won,168000.00,2024-05-05,2024-01-20,rachel.sales,Analytics,Outbound,1,1
+50,21,Sterling Wealth - Compliance Suite,Closed Won,215000.00,2024-08-18,2024-04-22,rachel.sales,Analytics,Upsell,1,1
+51,21,Sterling Wealth - Client Portal,Proposal,185000.00,2025-01-20,2024-10-08,rachel.sales,Platform,Upsell,0,0
+52,22,Cornerstone Mfg - Factory Analytics,Closed Won,142000.00,2024-04-28,2024-01-12,david.hunter,Analytics,Trade Show,1,1
+53,22,Cornerstone Mfg - Demand Forecasting,Closed Won,118000.00,2024-08-15,2024-04-30,david.hunter,AI Services,Upsell,1,1
+54,23,Evergreen Market - Store Analytics,Closed Won,85000.00,2024-06-08,2024-03-05,carlos.rivera,Analytics,Inbound,1,1
+55,23,Evergreen Market - Loyalty Platform,Closed Lost,120000.00,2024-10-25,2024-06-15,carlos.rivera,Platform,Outbound,0,1
+56,24,Nexus Tech - Cloud Monitoring,Closed Won,135000.00,2024-05-12,2024-02-05,sarah.connors,Platform,Inbound,1,1
+57,24,Nexus Tech - Data Pipeline,Closed Won,98000.00,2024-08-22,2024-05-08,sarah.connors,Integration,Upsell,1,1
+58,24,Nexus Tech - AI Copilot,Discovery,210000.00,2025-02-01,2024-10-20,sarah.connors,AI Services,Outbound,0,0
+59,25,Valley Health - Basic Analytics,Closed Won,35000.00,2024-07-05,2024-04-10,david.hunter,Analytics,Webinar,1,1
+60,25,Valley Health - Scheduling Module,Closed Lost,55000.00,2024-11-10,2024-08-01,david.hunter,Platform,Outbound,0,1
+61,26,Keystone Bank - Fraud Detection,Closed Won,145000.00,2024-06-18,2024-03-12,rachel.sales,AI Services,Inbound,1,1
+62,26,Keystone Bank - Loan Analytics,Closed Won,88000.00,2024-10-05,2024-06-25,rachel.sales,Analytics,Upsell,1,1
+63,27,Heritage Craft - Production Tracker,Closed Won,45000.00,2024-05-25,2024-02-18,carlos.rivera,Analytics,Trade Show,1,1
+64,27,Heritage Craft - Order Management,Closed Lost,72000.00,2024-09-08,2024-05-28,carlos.rivera,Integration,Outbound,0,1
+65,28,BookWise EdTech - Learning Analytics,Closed Won,28000.00,2024-06-30,2024-04-05,sarah.connors,Analytics,Inbound,1,1
+66,28,BookWise EdTech - Content Platform,Closed Lost,65000.00,2024-10-30,2024-07-10,sarah.connors,Platform,Outbound,0,1
+67,29,Omni Retail - Unified Commerce Platform,Closed Won,450000.00,2024-04-18,2024-01-02,david.hunter,Platform,Outbound,1,1
+68,29,Omni Retail - Supply Chain Visibility,Closed Won,280000.00,2024-08-10,2024-04-20,david.hunter,Analytics,Upsell,1,1
+69,29,Omni Retail - AI Demand Planning,Negotiation,350000.00,2025-01-31,2024-09-25,david.hunter,AI Services,Upsell,0,0
+70,30,Quantum Labs - HPC Analytics,Closed Won,380000.00,2024-05-08,2024-01-18,rachel.sales,Analytics,Outbound,1,1
+71,30,Quantum Labs - Research Platform,Closed Won,290000.00,2024-09-15,2024-05-20,rachel.sales,Platform,Upsell,1,1
+72,30,Quantum Labs - Quantum ML Pipeline,Proposal,520000.00,2025-03-15,2024-11-05,rachel.sales,AI Services,Upsell,0,0
+73,3,Titan Financial - Wealth Dashboard,Closed Lost,195000.00,2024-05-15,2024-02-08,rachel.sales,Analytics,Inbound,0,1
+74,5,Summit Retail - Store Analytics Refresh,Closed Won,210000.00,2024-11-20,2024-08-05,sarah.connors,Analytics,Upsell,1,1
+75,8,Pinnacle Healthcare - Compliance Module,Closed Lost,225000.00,2024-11-30,2024-07-15,rachel.sales,Analytics,Outbound,0,1
+76,13,CloudSphere - Security Posture,Closed Won,310000.00,2024-08-28,2024-05-15,rachel.sales,Platform,Upsell,1,1
+77,15,Atlas Financial - Client Onboarding,Closed Won,178000.00,2024-10-10,2024-06-20,carlos.rivera,Integration,Upsell,1,1
+78,9,Ironclad Industries - Quality Control AI,Closed Won,245000.00,2024-11-08,2024-07-22,sarah.connors,AI Services,Referral,1,1
+79,1,Apex Dynamics - Data Governance,Closed Won,155000.00,2024-08-15,2024-05-01,rachel.sales,Platform,Upsell,1,1
+80,2,Meridian Health - Population Health,Negotiation,365000.00,2025-01-15,2024-08-20,david.hunter,Analytics,Upsell,0,0
