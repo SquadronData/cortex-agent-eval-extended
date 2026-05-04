@@ -252,7 +252,7 @@ CREATE OR REPLACE SEMANTIC VIEW SALES_PIPELINE_ANALYST
     PUBLIC deals.is_won AS is_won,
     PUBLIC deals.is_closed AS is_closed,
     PUBLIC deals.close_date AS close_date,
-    PUBLIC deals.created_date AS deal_created_date,
+    PUBLIC deals.deal_created_date AS created_date,
     -- Activity dimensions
     PUBLIC activity.activity_date AS activity_date,
     PUBLIC activity.stage_change AS stage_change
