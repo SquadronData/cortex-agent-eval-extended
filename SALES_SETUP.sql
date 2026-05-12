@@ -40,18 +40,18 @@ GRANT CREATE SEMANTIC VIEW ON SCHEMA SALES_PIPELINE_DB.AGENTS TO ROLE AGENT_EVAL
 GRANT CREATE CORTEX SEARCH SERVICE ON SCHEMA SALES_PIPELINE_DB.AGENTS TO ROLE AGENT_EVAL_ROLE;
 
 -- ====================================================================
--- SECTION 3: SWITCH TO AGENT_EVAL_ROLE AND SET UP GIT
+-- SECTION 3: SWITCH TO AGENT_EVAL_ROLE
 -- ====================================================================
 
 USE ROLE AGENT_EVAL_ROLE;
 USE SCHEMA SALES_PIPELINE_DB.AGENTS;
 
--- Reuse the same git integration created by SETUP.sql
--- Fetch latest to ensure new CSV files are available
-ALTER GIT REPOSITORY MARKETING_CAMPAIGNS_DB.AGENTS.CORTEX_AGENT_QUICKSTART_REPO FETCH;
+-- Reuse the same Workspace imported in SETUP.sql:
+--   snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/
+-- If you haven't imported it yet, see SETUP.sql Section 3 for instructions.
 
 -- Verify new data files are visible
-LS @MARKETING_CAMPAIGNS_DB.AGENTS.CORTEX_AGENT_QUICKSTART_REPO/branches/main/data;
+LS 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/';
 
 -- ====================================================================
 -- SECTION 4: CREATE FILE FORMAT
@@ -85,7 +85,7 @@ CREATE OR REPLACE TABLE ACCOUNTS (
 
 INSERT INTO ACCOUNTS (account_id, account_name, industry, company_size, annual_revenue, region, account_owner, account_tier, created_date)
 SELECT $1,$2,$3,$4,$5,$6,$7,$8,$9
-FROM @MARKETING_CAMPAIGNS_DB.AGENTS.CORTEX_AGENT_QUICKSTART_REPO/branches/main/data/ACCOUNTS.csv (FILE_FORMAT=>SALES_CSV_FORMAT);
+FROM 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/ACCOUNTS.csv' (FILE_FORMAT=>SALES_CSV_FORMAT);
 
 -- ============================================================================
 -- DEALS
@@ -107,7 +107,7 @@ CREATE OR REPLACE TABLE DEALS (
 
 INSERT INTO DEALS (deal_id, account_id, deal_name, deal_stage, deal_amount, close_date, created_date, deal_owner, product_line, lead_source, is_won, is_closed)
 SELECT $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12
-FROM @MARKETING_CAMPAIGNS_DB.AGENTS.CORTEX_AGENT_QUICKSTART_REPO/branches/main/data/DEALS.csv (FILE_FORMAT=>SALES_CSV_FORMAT);
+FROM 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/DEALS.csv' (FILE_FORMAT=>SALES_CSV_FORMAT);
 
 -- ============================================================================
 -- DEAL_ACTIVITY
@@ -127,7 +127,7 @@ CREATE OR REPLACE TABLE DEAL_ACTIVITY (
 
 INSERT INTO DEAL_ACTIVITY (activity_id, deal_id, activity_date, emails_sent, calls_made, meetings_held, stage_change, deal_amount_change, win_probability, days_in_stage)
 SELECT $1,$2,$3,$4,$5,$6,$7,$8,$9,$10
-FROM @MARKETING_CAMPAIGNS_DB.AGENTS.CORTEX_AGENT_QUICKSTART_REPO/branches/main/data/DEAL_ACTIVITY.csv (FILE_FORMAT=>SALES_CSV_FORMAT);
+FROM 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/DEAL_ACTIVITY.csv' (FILE_FORMAT=>SALES_CSV_FORMAT);
 
 -- ============================================================================
 -- DEAL_NOTES
@@ -145,7 +145,7 @@ CREATE OR REPLACE TABLE DEAL_NOTES (
 
 INSERT INTO DEAL_NOTES (note_id, deal_id, note_date, note_type, author, note_content, next_steps, competitive_intel)
 SELECT $1,$2,$3,$4,$5,$6,$7,$8
-FROM @MARKETING_CAMPAIGNS_DB.AGENTS.CORTEX_AGENT_QUICKSTART_REPO/branches/main/data/DEAL_NOTES.csv (FILE_FORMAT=>SALES_CSV_FORMAT);
+FROM 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/DEAL_NOTES.csv' (FILE_FORMAT=>SALES_CSV_FORMAT);
 
 -- ====================================================================
 -- SECTION 6: CREATE AND POPULATE ONTOLOGY TABLES
@@ -166,7 +166,7 @@ CREATE OR REPLACE TABLE ONTOLOGY_NODES (
 
 INSERT INTO ONTOLOGY_NODES (node_id, node_type, node_name, domain, source_table, source_id, properties)
 SELECT $1,$2,$3,$4,$5,$6, TRY_PARSE_JSON($7)
-FROM @MARKETING_CAMPAIGNS_DB.AGENTS.CORTEX_AGENT_QUICKSTART_REPO/branches/main/data/ONTOLOGY_NODES.csv (FILE_FORMAT=>SALES_CSV_FORMAT);
+FROM 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/ONTOLOGY_NODES.csv' (FILE_FORMAT=>SALES_CSV_FORMAT);
 
 -- ============================================================================
 -- ONTOLOGY_EDGES
@@ -182,7 +182,7 @@ CREATE OR REPLACE TABLE ONTOLOGY_EDGES (
 
 INSERT INTO ONTOLOGY_EDGES (edge_id, source_node_id, target_node_id, relationship_type, weight, properties)
 SELECT $1,$2,$3,$4,$5, TRY_PARSE_JSON($6)
-FROM @MARKETING_CAMPAIGNS_DB.AGENTS.CORTEX_AGENT_QUICKSTART_REPO/branches/main/data/ONTOLOGY_EDGES.csv (FILE_FORMAT=>SALES_CSV_FORMAT);
+FROM 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/ONTOLOGY_EDGES.csv' (FILE_FORMAT=>SALES_CSV_FORMAT);
 
 -- ============================================================================
 -- ONTOLOGY_TRIPLES
@@ -199,7 +199,7 @@ CREATE OR REPLACE TABLE ONTOLOGY_TRIPLES (
 
 INSERT INTO ONTOLOGY_TRIPLES (triple_id, subject, predicate, object, subject_domain, object_domain, confidence)
 SELECT $1,$2,$3,$4,$5,$6,$7
-FROM @MARKETING_CAMPAIGNS_DB.AGENTS.CORTEX_AGENT_QUICKSTART_REPO/branches/main/data/ONTOLOGY_TRIPLES.csv (FILE_FORMAT=>SALES_CSV_FORMAT);
+FROM 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/ONTOLOGY_TRIPLES.csv' (FILE_FORMAT=>SALES_CSV_FORMAT);
 
 -- ====================================================================
 -- SECTION 7: VALIDATE DATA
