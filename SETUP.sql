@@ -82,10 +82,6 @@ BEGIN
 END;
 $$;
 
--- Git setup
-GRANT CREATE API INTEGRATION ON ACCOUNT TO ROLE AGENT_EVAL_ROLE;
-GRANT CREATE GIT REPOSITORY ON SCHEMA MARKETING_CAMPAIGNS_DB.AGENTS TO ROLE AGENT_EVAL_ROLE;
-
 -- Service and Agent creation
 GRANT CREATE SEMANTIC VIEW ON SCHEMA MARKETING_CAMPAIGNS_DB.AGENTS TO ROLE AGENT_EVAL_ROLE;
 GRANT CREATE CORTEX SEARCH SERVICE ON SCHEMA MARKETING_CAMPAIGNS_DB.AGENTS TO ROLE AGENT_EVAL_ROLE;
@@ -93,30 +89,28 @@ GRANT CREATE PROCEDURE ON SCHEMA MARKETING_CAMPAIGNS_DB.AGENTS TO ROLE AGENT_EVA
 GRANT CREATE AGENT ON SCHEMA MARKETING_CAMPAIGNS_DB.AGENTS TO ROLE AGENT_EVAL_ROLE;
 
 -- ============================================================================
--- SECTION 3: CREATE GIT INTEGRATION (for loading CSV files from repo)
+-- SECTION 3: WORKSPACE PREREQUISITE
 -- ============================================================================
+-- This setup loads CSVs from a Snowflake Workspace rather than via a Git API
+-- integration. This avoids needing CREATE API INTEGRATION privileges (which
+-- many HOL/trial accounts restrict) and works against the public repo with
+-- zero auth.
+--
+-- BEFORE RUNNING THIS SCRIPT:
+--   1. In Snowsight, go to Projects → Workspaces → "From Git Repository"
+--   2. Repository URL: https://github.com/SquadronData/cortex-agent-eval-extended.git
+--   3. Workspace name: Ontology_HOL_Squadron
+--   (Public repo — no credentials required.)
+--
+-- All file references below use:
+--   snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/...
 
 -- Use new role
 USE ROLE AGENT_EVAL_ROLE;
+USE SCHEMA MARKETING_CAMPAIGNS_DB.AGENTS;
 
--- Create API integration for GitHub
-CREATE API INTEGRATION IF NOT EXISTS GIT_API_INTEGRATION_AGENT_EVAL_QUICKSTART
-    API_PROVIDER = git_https_api
-    API_ALLOWED_PREFIXES = ('https://github.com/SquadronData/')
-    ENABLED = TRUE;
-
--- Clone the GitHub repository
-CREATE OR REPLACE GIT REPOSITORY CORTEX_AGENT_QUICKSTART_REPO
-    API_INTEGRATION = GIT_API_INTEGRATION_AGENT_EVAL_QUICKSTART
-    ORIGIN = 'https://github.com/SquadronData/cortex-agent-eval-extended.git';
-
--- Fetch latest from GitHub
-ALTER GIT REPOSITORY CORTEX_AGENT_QUICKSTART_REPO FETCH;
-
--- Verify repository
-SHOW GIT BRANCHES IN CORTEX_AGENT_QUICKSTART_REPO;
-LS @CORTEX_AGENT_QUICKSTART_REPO/branches/main/data;
-LS @CORTEX_AGENT_QUICKSTART_REPO/branches/main/data;
+-- Verify the workspace is visible
+LS 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/';
 
 
 
@@ -154,7 +148,7 @@ CREATE OR REPLACE TABLE CAMPAIGNS (
 -- Populate CAMPAIGNS table
 INSERT INTO CAMPAIGNS (campaign_id, campaign_name, campaign_type, start_date, end_date, budget_allocated, target_audience, channel, status, created_by)
 SELECT $1,$2,$3,$4,$5,$6,$7,$8,$9,$10
-FROM @CORTEX_AGENT_QUICKSTART_REPO/branches/main/data/CAMPAIGNS.csv (FILE_FORMAT=>AGENT_EVAL_QUICKSTART_CSV_FORMAT);
+FROM 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/CAMPAIGNS.csv' (FILE_FORMAT=>AGENT_EVAL_QUICKSTART_CSV_FORMAT);
 
 -- ============================================================================
 -- CAMPAIGN_PERFORMANCE
@@ -178,7 +172,7 @@ CREATE OR REPLACE TABLE CAMPAIGN_PERFORMANCE (
 -- Populate CAMPAIGN_PERFORMANCE table
 INSERT INTO CAMPAIGN_PERFORMANCE (performance_id, campaign_id, date, impressions, clicks, conversions, cost_per_click, cost_per_acquisition, revenue_generated, roi_percentage, engagement_rate) 
 SELECT $1, $2,$3,$4,$5, $6, $7, $8, $9, $10, $11
-FROM @CORTEX_AGENT_QUICKSTART_REPO/branches/main/data/CAMPAIGN_PERFORMANCE.csv (FILE_FORMAT=>AGENT_EVAL_QUICKSTART_CSV_FORMAT);
+FROM 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/CAMPAIGN_PERFORMANCE.csv' (FILE_FORMAT=>AGENT_EVAL_QUICKSTART_CSV_FORMAT);
 
 -- ============================================================================
 --CAMPAIGN_CONTENT
@@ -196,7 +190,7 @@ CREATE OR REPLACE TABLE CAMPAIGN_CONTENT (
 -- Populate CAMPAIGN_CONTENT table
 INSERT INTO CAMPAIGN_CONTENT (campaign_id, content_type, campaign_description, marketing_copy, a_b_test_notes)
 SELECT $1, $2,$3,$4,$5 
-FROM @CORTEX_AGENT_QUICKSTART_REPO/branches/main/data/CAMPAIGN_CONTENT.csv (FILE_FORMAT=>AGENT_EVAL_QUICKSTART_CSV_FORMAT);
+FROM 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/CAMPAIGN_CONTENT.csv' (FILE_FORMAT=>AGENT_EVAL_QUICKSTART_CSV_FORMAT);
 
 -- ============================================================================
 --CAMPAIGN_FEEDBACK
@@ -217,7 +211,7 @@ CREATE OR REPLACE TABLE CAMPAIGN_FEEDBACK (
 -- Populate CAMPAIGN_FEEDBACK table
 INSERT INTO CAMPAIGN_FEEDBACK (feedback_id, campaign_id, feedback_date, customer_segment, satisfaction_score, detailed_comments, survey_responses, recommended_improvements)
 SELECT $1, $2,$3,$4,$5, $6, $7, $8
-FROM @CORTEX_AGENT_QUICKSTART_REPO/branches/main/data/CAMPAIGN_FEEDBACK.csv (FILE_FORMAT=>AGENT_EVAL_QUICKSTART_CSV_FORMAT);
+FROM 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/CAMPAIGN_FEEDBACK.csv' (FILE_FORMAT=>AGENT_EVAL_QUICKSTART_CSV_FORMAT);
 
 -- ============================================================================
 --EVALS_TABLE
@@ -230,7 +224,7 @@ CREATE OR REPLACE TABLE EVALS_TABLE (
 -- Populate EVALS_TABLE table
 INSERT INTO EVALS_TABLE (input_query, ground_truth_data)
 SELECT $1, $2
-FROM @CORTEX_AGENT_QUICKSTART_REPO/branches/main/data/EVALS_TABLE.csv (FILE_FORMAT=>AGENT_EVAL_QUICKSTART_CSV_FORMAT);
+FROM 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/data/EVALS_TABLE.csv' (FILE_FORMAT=>AGENT_EVAL_QUICKSTART_CSV_FORMAT);
 
 CREATE OR REPLACE TABLE EVALS_TABLE
 AS SELECT INPUT_QUERY, PARSE_JSON(GROUND_TRUTH_DATA) AS GROUND_TRUTH_DATA
@@ -645,9 +639,9 @@ CREATE OR REPLACE STAGE MARKETING_CAMPAIGNS_DB.AGENTS.EVAL_CONFIG_STAGE
   DIRECTORY = (ENABLE = TRUE)
   COMMENT = 'Internal stage to host evaluation config files';
 
--- Copy file from git repo to stage
+-- Copy file from workspace to stage
 COPY FILES INTO @MARKETING_CAMPAIGNS_DB.AGENTS.EVAL_CONFIG_STAGE
-FROM @CORTEX_AGENT_QUICKSTART_REPO/branches/main/
+FROM 'snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/'
 FILES = ('marketing_campaign_eval_config.yaml');
 
 -- Confirm yaml was uploaded

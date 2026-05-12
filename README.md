@@ -81,14 +81,27 @@ This repo provides two complete analytical domains connected by a knowledge grap
 
 ## Installation
 
+### Step 0: Import this repo as a Snowflake Workspace
+
+The setup scripts load CSV data from a Snowflake Workspace rather than via a Git API integration. This avoids needing `CREATE API INTEGRATION` privileges (which many HOL/trial accounts restrict) and requires no credentials since the repo is public.
+
+In Snowsight:
+
+1. Go to **Projects → Workspaces**
+2. Click **From Git Repository**
+3. Repository URL: `https://github.com/SquadronData/cortex-agent-eval-extended.git`
+4. Workspace name: **`Ontology_HOL_Squadron`** (the name must match — the SQL scripts reference this path)
+5. Click **Create**
+
+The setup scripts reference files at `snow://workspace/USER$.PUBLIC."Ontology_HOL_Squadron"/versions/live/...`. If you use a different workspace name, find-and-replace that path in `SETUP.sql` and `SALES_SETUP.sql` before running.
+
 ### Step 1: Run the Marketing Domain Setup
 
 Open a Snowflake worksheet and execute `SETUP.sql`. This creates:
 
 - `MARKETING_CAMPAIGNS_DB.AGENTS` schema
 - `AGENT_EVAL_ROLE` with all necessary grants
-- Git API integration pointing to this repo
-- Marketing campaign tables loaded from CSV
+- Marketing campaign tables loaded from CSV (via the Workspace from Step 0)
 - `MARKETING_PERFORMANCE_ANALYST` semantic view
 - `MARKETING_CAMPAIGNS_SEARCH` Cortex Search service
 - A Cortex Agent and evaluation dataset
@@ -110,7 +123,7 @@ After SETUP.sql completes, execute `SALES_SETUP.sql`. This creates:
 
 ```sql
 -- Open SALES_SETUP.sql in a Snowflake worksheet and run all sections in order.
--- Requires SETUP.sql to have been run first (reuses the git integration).
+-- Requires SETUP.sql to have been run first (reuses the AGENT_EVAL_ROLE and Workspace).
 -- Estimated runtime: 3-5 minutes.
 ```
 
@@ -238,7 +251,7 @@ SELECT PARSE_JSON(
 - Cortex Analyst (Semantic Views)
 - Cortex Search Services
 - Cortex Agent Evaluations
-- Git Integration (for loading CSVs from this repo)
+- Snowflake Workspaces (for loading CSVs from this repo)
 - VARIANT columns (for ontology node/edge properties)
 
 ### Python (optional, for eval dataset generation)
